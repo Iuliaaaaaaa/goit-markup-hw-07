@@ -25,7 +25,7 @@ p {
   margin: 0;
 }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
 }
@@ -38,29 +38,57 @@ ul {
   text-decoration: none;
 }
 
-img { display: block;
+img { 
+     display: block;
+     width: 100%;
       max-width: 100%;
       height: auto;
 }
 
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
+  max-width: 426px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
   /* outline: 2px solid red; */
 }
 
-/* --------------------------------------HEADER------------------- */
 
+/* ------------H E A D E R------- */
 .header {
+  background: #FFFFFF;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);  ;
 }
 
 .header-container {
+  position: relative;
   display: flex;
   align-items: center;
+  height: 70px;
 }
 .header-navigation {
   display: flex;
@@ -68,25 +96,8 @@ img { display: block;
 }
 
 .header-list {
-  display: flex;
-  align-items: center;}
+     display: none;}
 
-.nav-line {
-  position: relative;
-  color: #404bbf;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-}
-
-.nav-line::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: -1px; 
-height: 4px; 
-width: 48px;
-background-color: #404bbf;
-border-radius: 2px;
-}
 
 .logo-up {
     font-family: "Raleway", sans-serif;
@@ -106,111 +117,67 @@ border-radius: 2px;
     color: var(--span-color);
     margin: 0 auto;
     }
-
-    .link-list{
-        display: flex;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--link-list-color);
-        padding: 24px 0;
-        position: relative;
-        transition: color var(--transition);
-    }
-
-    .link-list-wbs {
-      color: #404bbf;
-      transition: color var(--transition);
-    }
-    .nav-item {
-      color: #404bbf;  
-    }
-    .nav-item:not(:last-child) {
-      margin-right: 40px;
-    }
-
+ 
     .address {
-        display: flex;
-        font-style: normal;
-        margin-left: auto;
+      display: none;
     }
-
-    .address-list {
+    
+    .mobile-menu-open-btn {
+      position: absolute;
       display: flex;
-    }
-    .address-item:not(:last-child) {
-      margin-right: 40px;
-    }
-
-    .address-link {
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--address-color) ;
-        padding-top: 24px;
-        padding-bottom: 24px;
-        font-family: inherit;
-        font-style: normal;
-        font-weight: 400;
-        font-style: 16px;
-        transition: color var(--transition);
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      cursor: pointer;
+      top: 24px;
+      right: 24px;
+      border: none;
+      background-color: transparent;
     }
 
-    .link-list:hover,
-    .link-list:focus {
-      color:  #404bbf;
+    .mobile-menu-open_icon {
+      stroke: var(--span-color);
     }
 
-      .address-item:hover,
-      .address-item:focus {
-        color: #404bbf;
-    }
-
-    .nav-addr-itm {
-     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    }
-
-  /* ----------------------------------MAIN---------Section 1------------ */
+/*Main*/
 
     .solutions {
       background-color:var(--solutions);
-      background-image:  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people_office.jpg);
+      background-image:  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mob-1x.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      max-width: 1440px; 
-      padding: 188px 0 ;
+      padding: 112px 0 ;
       align-items: center;
-    }
+      }
 
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-    }
-
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .solution {
+          background-image: linear-gradient(
+              rgba(46, 47, 66, 0.7),
+              rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/people-office-mob-2x.jpg);
+        }
+      }
       .title {
-      font-size: 56px;
-      line-height: 1.07;
+      font-size: 36px;
+      line-height: 1.11;
       text-align: center;
       letter-spacing: 0.02em;
       color: #ffffff;
-      max-width: 496px;
-      margin-bottom: 48px;
+      max-width: 320px;
+      margin-bottom: 72px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .order {
+    .btn-order {
       background: #4D5AE5 ;
-      font-family: "Roboto", sans-serif;
+      font-family: inherit;
       font-weight: 500;
       font-size: 16px;
       line-height: 1.5;
@@ -232,36 +199,29 @@ border-radius: 2px;
     .order:focus {
       background-color: #404BBF;
     }
-
-    /*------------------------------------ Section 2------------------------ */
+    /* Section 2----W O R K------ */
 
     .work {
-      padding: 120px 0;
+      padding: 96px 0;
     }
 
-    .container-work {
+    .work-list {
       display: flex;
-    }
-
-    .work-list{
-      display: flex;
-      gap: 24px;
+      flex-wrap: wrap;
+      gap: 72px;
     }
 
     .antena {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 112px;
-      background-color: #f4f4fd; 
-      border-radius: 4px;
-      margin-bottom: 8px;
+      display: none;
        }
 
     .strategy {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 1.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.11;
       letter-spacing: 0.02em;
       color: var(--solutions);
       margin-bottom: 8px;
@@ -270,10 +230,14 @@ border-radius: 2px;
     .ourgoal {
       line-height: 1.5;
       letter-spacing: 0.02em;
-      width: 264px;
+    
     }
 
-/*------------------------------------ Section 3 offers------------------------ */
+
+
+
+
+
     .our-offers {
       padding-bottom: 120px;
     }
@@ -294,7 +258,6 @@ border-radius: 2px;
       width: calc((100% - 48px) / 3);
     }
 
-    /*------------------------------------ Section 4 team------------------------ */
     .team {
       padding-bottom: 120px;
       padding-top: 120px;
@@ -381,8 +344,7 @@ border-radius: 2px;
       text-align: center;
       margin-bottom: 8px;
     }
-      
-        /*------------------------------------ Section 4 customers------------------------ */
+
     .customers {
       padding-top: 120px;
       padding-bottom: 120px;
@@ -433,7 +395,7 @@ border-radius: 2px;
     .customers-icon {
       fill: currentColor;
     }
-    /*---------------------------------------- FOOTER------------------------------ */
+    /*----- FOOTER----- */
 
     .footer {
       background-color: var(--solutions);
@@ -522,7 +484,6 @@ border-radius: 2px;
       color: var(--span-color);
     }
 
-   /*---------------------------------------- FOOTER-form ------------------------------ */
     .footerform-container {
       margin-left: 80px;
     }
@@ -582,12 +543,11 @@ border-radius: 2px;
     .footerform-icon {
       margin-left: 16px;
     }
-/*  ------------------------------------- Portfolio ----------------- */
+/*  ---- Portfolio ---- */
 
     .portfolio {
     padding: 96px 0 120px 0;
     }
-
     .button-list {
       display: flex;
       gap: 24px;
@@ -698,7 +658,7 @@ border-radius: 2px;
       transform: translate(0, 0);
     }
     
-   /*---------------------------------------- M O D A L ------------------------------ */
+
     .backdrop {
       position: fixed;
       width: 100%;
