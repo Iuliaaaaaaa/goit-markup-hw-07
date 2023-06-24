@@ -98,7 +98,6 @@ img {
 .header-list {
      display: none;}
 
-
 .logo-up {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -498,17 +497,12 @@ img {
     .customers-icon {
       fill: currentColor;
     }
-    /*----- FOOTER----- */
+    /*----- FOOTER----z- */
 
     .footer {
       background-color: var(--solutions);
       padding: 96px 0;
     }
-
-    /* .footer-container {
-     display: flex;
-     align-items: baseline;
-    } */
 
     .footer-logo-bx{
      margin-bottom: 72px;

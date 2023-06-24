@@ -13,10 +13,36 @@
     align-items: center;
 }
 
-.nav-item:not(:last-child) {
-    margin-right: 40px;
-  }
+.header-list{
+    display: flex;
+    gap: 40px;
+}
 
+.address {
+    display: flex;
+    margin-left: auto;
+    font-style: normal;
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.address-link {
+     font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;  
+color: var(--address-color);
+}
+
+.mobile-menu-open-btn{
+    display: none;
+}
+
+.mob-list {
+    display: none;
+}
 .link-list {
     display: block;
     position: relative;
@@ -28,4 +54,137 @@
     letter-spacing: 0.02em;
     color: var(--solutions);
   }
+
+  /*  -----------------------M A I N--------------- */
+
+  .solutions {
+    background-color:var(--solutions);
+    background-image:  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tab-1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 112px 0 ;
+    align-items: center;
+    }
+
+  @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .solution {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+          ),
+          url(../images/people-office-tab-2x.jpg);
+      }
+    }
+
+.title {
+width: 496px;
+margin-bottom: 36px;
+}
+
+/* ----------------------W O R K----------------- */
+
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.strategy {
+    justify-content: flex-start;
+}
+
+.ourgoal {
+    width: 356px;
+}
+
+.our-goals {
+    width: calc((100%-24px) / 2 );
+}
+
+/* ---------------------T E A M --------------------------- */
+
+.team-container {
+    padding: 0 108px;
+  }
+
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .mark-item {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+  width: calc((100% - 24px) / 2 );
+  }
+
+/* ---------------- C U S T O M E R S------------------ */
+
+.customers-container {
+    padding: 0 108px;
+}
+.customers-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+.customers-item {
+    width: calc((100% - 48px) / 3 );
+}
+
+/* ------------------------ F O T E R -------------------- */
+
+
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding: 0 108px;
+    background-color: var(--solutions);
+}
+
+.footer-logo {
+    justify-content: start;
+}
+
+.footer-logo-bx{
+    margin-bottom: 0;
+   }
+
+   .social {
+    margin-bottom: 0;
+}
+
+.footer-text-bx{
+    justify-content: start;
+}
+
+.footerform-container {
+    margin-bottom: 0;
+}
+.footerform-text {
+    justify-content: start; 
+}
+
+.footerform {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+}
+
+.footer-input {
+    width: 264px;
+}
 }
