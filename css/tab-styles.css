@@ -52,8 +52,37 @@ color: var(--address-color);
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--solutions);
+    color: #2E2F42;
   }
+
+  .link-list:hover,
+  .link-list:focus {
+    color: #404BBF;
+  }
+
+  
+  .nav-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform var(--transition);
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+    background-color: #404BBF;
+    border-radius: 2px;
+  }
+  
+  .nav-line:hover:after,
+  .nav-line:focus:after,
+  .nav-line.link-list-wbs:after {
+    transform: scaleX(1);
+}
+
+.link-list-wbs {
+    color: #404BBF;
+}
 
   /*  -----------------------M A I N--------------- */
 
@@ -103,14 +132,17 @@ margin-bottom: 36px;
 }
 
 .our-goals {
-    width: calc((100%-24px) / 2 );
+    width: calc((100% - 24px) / 2 );
 }
 
 /* ---------------------T E A M --------------------------- */
 
-.team-container {
-    padding: 0 108px;
+.team {
+    padding-bottom: 120px;
+    padding-top: 120px;
+    background: #F4F4FD;
   }
+
 
   .team-list {
     display: flex;

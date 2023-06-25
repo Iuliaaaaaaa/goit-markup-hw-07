@@ -3,18 +3,161 @@
         max-width: 1158px;
       }
 
-    .header {
+    .header-container {
         max-width: 1128px;
       }
 
       .address-list {
         display: flex;
         flex-direction: row;
+        gap: 40px;
       }
 
+      .address-link {
+        font-size: 16px;
+       line-height: 1.5;
+       letter-spacing: 0.02em;
+       padding-top: 24px;
+       padding-bottom: 24px;
+       color: #434455;
+      }
 
+      /* ----- ---------M A I N ----------------- */
 
-      
-
+      .solutions {
+        background-color:var(--solutions);
+        background-image:  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people_office.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 188px 0 ;
+        align-items: center;
+        }
     
+      @media (min-device-pixel-ratio: 2),
+          (-webkit-min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          .solution {
+            background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+              ),
+              url(../images/people-office-2x.jpg);
+          }
+        }
+
+      .title {
+         max-width: 496px;
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 1.07;
+          margin-bottom: 48px;
+       }
+
+    /* ----------------------W O R K----------------- */
+
+    .work {
+      padding: 120px 0;
+    }
+
+    .container-work {
+      display: flex;
+    }
+
+    .antena {
+      width: 264px;
+      height: 112px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      color: #F4F4FD;
+      background: #F4F4FD;
+    }
+
+    .strategy {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: #2E2F42;
+    }
+
+    .ourgoal {
+      width: 264px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    }
+
+    .our-goals {
+      width: calc((100% - 72px) / 4 );
+  }
+
+ /* ---------------our-offers------------- */
+
+ .our-offers {
+  display: flex;
+  padding-bottom: 120px;
+}
+
+.whatwedo {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--solutions);
+  margin-bottom: 72px;
+}
+
+.offers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.products {
+  width: calc((100% - 48px) / 3);
+}
+
+/* ---------------------T E A M --------------------------- */
+
+.team {
+  padding: 0 15px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.mark-item {
+width: calc((100% - 72px ) / 4 );
+ border-radius: 0px 0px 4px 4px;
+background:  #fff;
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+/* ---------------- C U S T O M E R S------------------ */
+
+.customers-container {
+  padding: 0 15px;
+}
+
+.customers-item {
+  width: calc((100% - 80px) / 6);
+}
+
+/* ------------------------ F O T E R -------------------- */
+
+.footer-container {
+  width: 1128px;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-color: #2E2F42;
+}
+
+
 }
