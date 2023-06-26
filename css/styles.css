@@ -784,6 +784,7 @@ img {
     }
     
 
+    /* ----------------- M O D A L ------------------------ */
     .backdrop {
       position: fixed;
       z-index: 100;
@@ -984,3 +985,15 @@ img {
        .checkbox-link {
         color: var(--text-color);
        }
+
+       @media screen and (max-width: 427px) {
+        .tel-mob-address-link {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 1.2;
+        }
+      
+        .modal {
+          width: 95%;
+        }
+      }
