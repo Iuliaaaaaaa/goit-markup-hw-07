@@ -124,7 +124,8 @@
 /* ---------------------T E A M --------------------------- */
 
 .team {
-  padding: 0 15px;
+padding: 96px 0;
+
 }
 
 .team-list {
@@ -145,6 +146,11 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 .customers-container {
   padding: 0 15px;
 }
+
+.customers-list {
+  flex-wrap: nowrap;
+}
+
 
 .customers-item {
   width: calc((100% - 80px) / 6);
