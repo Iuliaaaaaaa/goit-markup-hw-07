@@ -356,7 +356,7 @@ img {
     }
 
     .team-container {
-      min-width: 294px;
+      max-width: 294px;
     }
 
       .whatwedo {
